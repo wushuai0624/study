@@ -1,0 +1,20 @@
+{%  extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            {% for x in api %}
+            <div class="col_sm">
+                <div class="card" style="width: 15rem;">
+                    <img class="card-img-top" src="{{ x.avatar_url }}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ x.login }}</h5>
+                        <p class="card-text">{{ x.login }}的github</p>
+                        <a href="{{ x.html_url }}" class="btn btn-primary">访问</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

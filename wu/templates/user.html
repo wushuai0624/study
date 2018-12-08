@@ -1,0 +1,17 @@
+{%  extends 'base.html' %}
+
+{% block content %}
+
+    {% if notfound %}
+        <h2>{{ notfound }}</h2>
+    {% else %}
+        <div class="card" style="width: 15rem;">
+            <img class="card-img-top" src="{{ username.avatar_url }}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{ username.name }}</h5>
+                <p class="card-text">location:{{ username.location }}</p>
+                <a href="{{ username.html_url }}" class="btn btn-primary">访问</a>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}
